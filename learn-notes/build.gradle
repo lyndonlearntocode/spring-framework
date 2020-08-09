@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+
+    // Lombok
+    id "io.freefair.lombok" version "5.1.1"
+}
+
+group 'org.springframework'
+version '5.2.9.BUILD-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile(project(":spring-beans"))
+    compile(project(":spring-core"))
+    compile(project(":spring-aop"))
+    compile(project(":spring-context"))
+    testCompile 'junit:junit:4.12'
+}
